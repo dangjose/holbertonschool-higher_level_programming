@@ -1,1 +1,1 @@
-Sprint 2 - Python
+Python - if/else, loops, functions
