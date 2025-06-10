@@ -4,10 +4,9 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
 
-    current_hs = list(a_dictionary.values())[0]
-    score_key = None
+    score_key, current_hs = list(a_dictionary.items())[0]
     for key in a_dictionary:
         if current_hs < a_dictionary[key]:
+            current_hs = a_dictionary.get(key)
             score_key = key
-        current_hs = a_dictionary.get(key)
     return score_key
