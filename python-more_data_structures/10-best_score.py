@@ -8,6 +8,6 @@ def best_score(a_dictionary):
     score_key = None
     for key in a_dictionary:
         if current_hs < a_dictionary[key]:
-            current_hs = a_dictionary.get(key)
             score_key = key
+        current_hs = a_dictionary.get(key)
     return score_key
