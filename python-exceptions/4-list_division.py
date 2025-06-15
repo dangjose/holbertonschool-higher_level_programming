@@ -13,6 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 result = a / b
         except ZeroDivisionError:
             print("division by 0")
+            result = int(0)
         except IndexError:
             print("out of range")
         finally:
