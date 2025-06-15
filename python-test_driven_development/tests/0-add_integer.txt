@@ -1,0 +1,26 @@
+>>> add_integer(2, 3)
+5
+>>> add_integer(100)
+198
+>>> add_integer(3.9, 2)
+5
+>>> add_integer(5, 3.7)
+8
+>>> add_integer(-2, -3)
+-5
+>>> add_integer(0, 0)
+0
+>>> add_integer(3.2, -1.7)
+1
+>>> add_integer("3", 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(3, "hello")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(5, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
