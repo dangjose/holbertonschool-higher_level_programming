@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 3. Area of a square"""
+"""Task 4. Access and update private attribute"""
 
 
 class Square:
@@ -21,14 +21,14 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """Size setter"""
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self.__size = value
 
     def area(self):
         """Calculate area of square"""
