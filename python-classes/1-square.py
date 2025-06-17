@@ -12,4 +12,5 @@ class Square:
         Returns:
             Nothing
     """
-    __size = None
+    def __init__(self):
+        self.__size = None
