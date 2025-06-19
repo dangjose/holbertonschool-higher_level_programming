@@ -56,8 +56,5 @@ class Rectangle:
             return 0
         return 2 * self.height + 2 * self.width
 
-    def __repr__(self):
-        return f'Rectangle({self.height, self.width})'
-
     def __str__(self):
         return '\n'.join('#' * self.width for item in range(self.height))
