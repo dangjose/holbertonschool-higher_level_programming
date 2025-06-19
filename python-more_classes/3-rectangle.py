@@ -60,6 +60,3 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return ""
         return '\n'.join('#' * self.width for item in range(self.height))
-
-    def __repr__(self):
-        return f"Rectangle({self.width}, {self.height})"
