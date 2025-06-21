@@ -1,0 +1,24 @@
+The ``BaseGeometry`` module
+=====================
+
+Using ``BaseGeometry``
+----------------
+
+First import ``BaseGeometry`` from the ``7-base_geometry`` file:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Tests:
+a is not int
+
+    >>> BaseGeometry().integer_validator("Josephine", "a")
+    Traceback (most recent call last):
+    ...
+    TypeError: Josephine must be an integer
+
+int is less than 0
+
+    >>> BaseGeometry().integer_validator("age", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
