@@ -23,6 +23,10 @@ integer_validator()
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+value is int
+
+    >>> BaseGeometry().integer_validator("Josephine", 1)
+
 value is string
 
     >>> BaseGeometry().integer_validator("Josephine", "a")
@@ -47,6 +51,13 @@ value is boolean
 value is dictionary
 
     >>> BaseGeometry().integer_validator("Josephine", {"value" : 0})
+    Traceback (most recent call last):
+    ...
+    TypeError: Josephine must be an integer
+
+value is set
+
+    >>> BaseGeometry().integer_validator("Josephine", {0, 0})
     Traceback (most recent call last):
     ...
     TypeError: Josephine must be an integer
