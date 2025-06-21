@@ -10,15 +10,26 @@ First import ``MyList`` from the ``1-my_list.py`` file:
 
 Create a list and print it:
 
-    >>> print(MyList([5, 3, 1, 4, 2]))
+    >>>my_list = MyList([5, 3, 1, 4, 2])
+    >>> print(my_list)
     [5, 3, 1, 4, 2]
 
 Test print_sorted (should print sorted, but not change original):
 
-    >>> MyList([5, 3, 1, 4, 2]).print_sorted()
+    >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
 Check the original list is unchanged:
 
-    >>> print(MyList([5, 3, 1, 4, 2]))
+    >>> print(my_list)
     [5, 3, 1, 4, 2]
+
+Append new element:
+
+    >>> my_list.append(0)
+    [5, 3, 1, 4, 2, 0]
+
+Empty List:
+
+    >>> print_sorted(MyList())
+    []
