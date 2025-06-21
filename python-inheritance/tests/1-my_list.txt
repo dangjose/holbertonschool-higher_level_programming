@@ -1,0 +1,24 @@
+The ``MyList`` module
+=====================
+
+Using ``MyList``
+----------------
+
+First import ``MyList`` from the ``1-my_list.py`` file:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Create a list and print it:
+
+    >>> print(MyList([5, 3, 1, 4, 2]))
+    [5, 3, 1, 4, 2]
+
+Test print_sorted (should print sorted, but not change original):
+
+    >>> MyList([5, 3, 1, 4, 2]).print_sorted()
+    [1, 2, 3, 4, 5]
+
+Check the original list is unchanged:
+
+    >>> print(MyList([5, 3, 1, 4, 2]))
+    [5, 3, 1, 4, 2]
