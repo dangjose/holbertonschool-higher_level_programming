@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task 1. My list"""
 
+
 class MyList(list):
     """
         Args:
