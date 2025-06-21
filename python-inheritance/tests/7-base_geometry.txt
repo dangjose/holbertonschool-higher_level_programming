@@ -9,9 +9,48 @@ First import ``BaseGeometry`` from the ``7-base_geometry`` file:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Tests:
-a is not int
+area()
+
+    >>> BaseGeometry().area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+value is string
 
     >>> BaseGeometry().integer_validator("Josephine", "a")
+    Traceback (most recent call last):
+    ...
+    TypeError: Josephine must be an integer
+
+value is list
+
+    >>> BaseGeometry().integer_validator("Josephine", [0])
+    Traceback (most recent call last):
+    ...
+    TypeError: Josephine must be an integer
+
+value is boolean
+
+    >>> BaseGeometry().integer_validator("Josephine", True)
+
+value is dictionary
+
+    >>> BaseGeometry().integer_validator("Josephine", {"value" : 0})
+    Traceback (most recent call last):
+    ...
+    TypeError: Josephine must be an integer
+
+value is tuple
+
+    >>> BaseGeometry().integer_validator("Josephine", (0,))
+    Traceback (most recent call last):
+    ...
+    TypeError: Josephine must be an integer
+
+value is None
+
+    >>> BaseGeometry().integer_validator("Josephine", None)
     Traceback (most recent call last):
     ...
     TypeError: Josephine must be an integer
@@ -19,6 +58,13 @@ a is not int
 int is less than 0
 
     >>> BaseGeometry().integer_validator("age", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+value is int
+
+    >>> BaseGeometry().integer_validator("age", 0)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
