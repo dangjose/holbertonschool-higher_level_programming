@@ -6,6 +6,9 @@ import sys
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+'''
+    Adds all arguments to a Python list, and then save them to a file
+'''
 
 filename = "add_item.json"
 
@@ -15,6 +18,6 @@ else:
     json_list = []
 
 for item in sys.argv:
-   json_list.append(item)
+    json_list.append(item)
 
-save_to_json_file(filename)
+save_to_json_file(json_list, filename)
