@@ -13,4 +13,4 @@ def class_to_json(obj):
         Returns:
             A dictionary of serializable attributes
     '''
-    return object.__dict__
+    return obj.__dict__
