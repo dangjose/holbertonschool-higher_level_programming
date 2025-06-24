@@ -17,7 +17,7 @@ if os.path.exists(filename):
 else:
     json_list = []
 
-for item in sys.argv:
+for item in sys.argv[1:]:
     json_list.append(item)
 
 save_to_json_file(json_list, filename)
