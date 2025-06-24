@@ -16,4 +16,4 @@ def save_to_json_file(my_obj, filename):
             Nothing
     '''
     with open(filename, 'w') as f:
-        json.load(my_obj)
+        json.dump(my_obj)
