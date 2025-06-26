@@ -12,11 +12,11 @@ def serialize_and_save_to_file(data, filename):
             data: Material to serialize and save.
             filename: Name of file to save data to.
     '''
-    try:
-        with open(filename, 'wb') as f:
-            pickle.dump(data, f)
-    except Exception:
-        raise TypeError
+    with open(filename, 'wb') as f:
+        try:
+                pickle.dump(data, f)
+        except Exception:
+            raise TypeError
 
 def load_and_deserialize(filename):
     '''
