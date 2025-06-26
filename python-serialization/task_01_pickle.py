@@ -44,7 +44,7 @@ class CustomObject:
                 Deserialized instance
         '''
         try:
-            with open(filename, 'wb') as f:
+            with open(filename, 'rb') as f:
                 return pickle.load(f)
         except Exception:
             return None
