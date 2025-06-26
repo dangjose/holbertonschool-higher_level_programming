@@ -25,4 +25,5 @@ def load_and_deserialize(filename):
         Returns:
             Deserialized data
     '''
-    return pickle.load(filename)
+    with open (filename, 'rb') as f:
+        return pickle.load(f)
