@@ -13,7 +13,7 @@ def serialize_and_save_to_file(data, filename):
             filename: Name of file to save data to.
     '''
     with open(filename, 'wb') as f:
-        pickle.dump(data, filename)
+        pickle.dump(data, f)
 
 def load_and_deserialize(filename):
     '''
