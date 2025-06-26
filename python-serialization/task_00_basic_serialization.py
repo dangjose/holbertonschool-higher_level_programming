@@ -12,8 +12,11 @@ def serialize_and_save_to_file(data, filename):
             data: Material to serialize and save.
             filename: Name of file to save data to.
     '''
-    with open(filename, 'wb') as f:
-        pickle.dump(data, f)
+    try:
+        with open(filename, 'wb') as f:
+            pickle.dump(data, f)
+    except (pickle.PicklingError, AttributeError, TypeError) as e:
+        raise e
 
 def load_and_deserialize(filename):
     '''
@@ -25,5 +28,8 @@ def load_and_deserialize(filename):
         Returns:
             Deserialized data
     '''
-    with open (filename, 'rb') as f:
-        return pickle.load(f)
+    try:
+        with open (filename, 'rb') as f:
+            return pickle.load(f)
+    except (pickle.UnpicklingError, AttributeError) as e:
+        raise e
