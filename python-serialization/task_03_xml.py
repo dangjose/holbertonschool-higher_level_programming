@@ -23,7 +23,7 @@ def serialize_to_xml(dictionary, filename):
     tree.write(filename, encoding="UTF-8", xml_declaration=True)
 
 
-def deserialize_to_xml(filename):
+def deserialize_from_xml(filename):
     '''
         Deserialize XML data from file.
 
