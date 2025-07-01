@@ -1,0 +1,70 @@
+HTTP vs HTTPS
+
+| Feature    | HTTP                             | HTTPS (Secure)                           |
+| ---------- | -------------------------------- | ---------------------------------------- |
+| Stands for | HyperText Transfer Protocol      | HyperText Transfer Protocol Secure       |
+| Encryption | Not encrypted (plain text)       | Encrypted via SSL/TLS                    |
+| Security   | Vulnerable to attacks            | Protects data in transit                 |
+| URL Prefix | `http://`                        | `https://`                               |
+| Port       | Default: 80                      | Default: 443                             |
+| Use Case   | Insecure sites or internal tools | Secure websites, login pages, e-commerce |
+
+
+Structure of HTTP Request and Response
+
+GET /index.html HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+
+Request Line: GET/index.html HTTP/1.1 → method, resource, version
+
+Headers: Provide metadata (host, user-agent, etc.)
+
+Body: (Optional, e.g.for POST/PUT requests)
+
+
+Common HTTP Methods
+
+| Method | Description        | Example Use Case                          |
+| -------| ------------------ | ----------------------------------------- |
+| GET    | Request data       | Load a web page or fetch API data         |
+| POST   | Submit data        | Submit login form or create a resource    |
+| PUT    | Replace a resource | Replace an entire user profile            |
+| DELETE | Remove a resource  | Delete a product or comment from database |
+
+
+HTTP Status Codes
+
+1xx - Informational: Request received and is being processed.
+
+| Code | Meaning             | Example Scenario                                  |
+| ---- | ------------------- | ------------------------------------------------- |
+| 100  | Continue            | Server received headers, client should continue   |
+| 101  | Switching Protocols | Client asked to switch from HTTP/1.1 to WebSocket |
+
+2xx - Success: Request was received, understood, and accepted.
+
+| Code | Meaning    | Example Scenario                             |
+| ---- | ---------- | -------------------------------------------- |
+| 200  | OK         | Standard response for a successful GET/POST  |
+| 201  | Created    | New resource successfully created via POST   |
+| 204  | No Content | Success, but no data to return (e.g. DELETE) |
+
+3xx - Redirection
+
+| Code | Meaning           | Example Scenario                        |
+| ---- | ----------------- | --------------------------------------- |
+| 301  | Moved Permanently | Page has permanently moved to a new URL |
+| 302  | Found             | Temporary redirect                      |
+| 304  | Not Modified      | Cached version is still valid           |
+
+4xx - Client Errors
+
+| Code | Meaning           | Example Scenario                                        |
+| ---- | ----------------- | ------------------------------------------------------- |
+| 400  | Bad Request       | Malformed request syntax or invalid query               |
+| 401  | Unauthorized      | Missing or invalid authentication                       |
+| 403  | Forbidden         | Authenticated but no permission to access               |
+| 404  | Not Found         | Resource/page doesn’t exist on the server               |
+| 429  | Too Many Requests | Client is being rate-limited (e.g., too many API calls) |
