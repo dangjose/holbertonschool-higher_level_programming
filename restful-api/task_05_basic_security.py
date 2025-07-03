@@ -16,7 +16,19 @@ auth = HTTPBasicAuth()
 app.config["JWT_SECRET_KEY"] = "DntJH@k@xWDga!dKU!TcJu*w7c.YVbxv"
 jwt = JWTManager(app)
 
-users = {}
+users = {
+    "user1": {
+        "username": "user1",
+        "password": generate_password_hash("password"),
+        "role": "user"
+    },
+    "admin1": {
+        "username": "admin1",
+        "password": generate_password_hash("password"),
+        "role": "admin"
+    }
+}
+
 
 @auth.verify_password
 def verify_password(username, password):
